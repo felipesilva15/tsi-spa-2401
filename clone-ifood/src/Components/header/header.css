@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+ 
+}
+.toolBar{
+    padding: 24px 150px !important;
+    display: inline-flex;
+    justify-content: space-around;
+    position: fixed;
+    background-color: #f7f7f7;
+}
+
+.navLinks{
+    margin: 0 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 24px;
+    flex-grow: 2;
+}
+
+
+.link:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn_red{
+    background-color: red !important;
+    color: black !important;
+    font-weight: bold;
+}
+.login.link{
+    color: red;
+    margin-top: 8px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.btn_c{
+    display: flex;
+    
+}
+
+.tamanho{
+    width: 5rem;
+}

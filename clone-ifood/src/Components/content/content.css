@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image:url("../../../public/img/ifood.png");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    width: 100%;
+}
+.content h1{
+    margin-top: 8rem;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.content p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 36px;
+}
+.gsearch{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     padding-top: 1rem;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn_red{
+    background-color: red !important;
+    margin-left: 1rem;
+    color: white !important;
+    border-radius:1%;
+    border: red;
+    padding: 5px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem; 
+}
+.q{
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.search-icon {
+    color: red;
+}
+
+.input-endereco {
+    margin: 0 10px;
+    width: 400px;
+}
