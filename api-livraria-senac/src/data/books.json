@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Harry Potter e o prisioneiro de Azkaban",
+        "author": "J.K. Rowling",
+        "year": 2017,
+        "price": 53.83,
+        "image": "https://m.media-amazon.com/images/I/41kT95iZ81L._SY445_SX342_.jpg"
+    },
+    {
+        "title": "As aventuras de Pinóquio",
+        "author": "Carlo Collodi",
+        "year": 2021,
+        "price": 49.50,
+        "image": "https://books.google.com.br/books/publisher/content?id=HgtIEAAAQBAJ&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U0DLDUu8mrSvYxQii0FdHqRtZ2qrg&w=1280"
+    },
+    {
+        "title": "Introdução ao Python",
+        "author": "Nilo Ney",
+        "year": 2014,
+        "price": 59.90,
+        "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRovWvZvcqdxbCY_NW0CXJpihfr92EbQLQrSFegc4q_VzCZI3TqRubpBTEhWe_67j3bXpgi5z8IDwIrBJkgoi7cHvcQdOudQlhjym5ON4FpdLZoRaueHTTTBg&usqp=CAE"
+    }
+]

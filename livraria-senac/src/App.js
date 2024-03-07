@@ -1,5 +1,6 @@
 import './App.css';
-import MenuBar from './components/navbar/Menu';
+import MostSearched from './components/mostSearched/MostSearched';
+import MenuBar from './components/navbar/MenuBar';
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       <MenuBar />
       <header className="App-header">
       </header>
+      <main>
+        <MostSearched></MostSearched>
+      </main>
     </div>
   );
 }
