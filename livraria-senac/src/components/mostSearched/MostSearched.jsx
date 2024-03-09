@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react"
 import { List, ListItem } from "../styles/Lists";
 
+const baseUrl = 'localhost:8000'
+
 function MostSearched() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
         const getBooks = async () => {
             try {
-                const res = fetch('localhost:8000/books');
+                const res = fetch(`${baseUrl}/books`);
                 const data = await res.json();
 
                 setBooks(data);
@@ -15,6 +17,8 @@ function MostSearched() {
                 console.error(error);
             }
         };
+
+        getBooks();
     }, books);
 
     return (
