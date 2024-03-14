@@ -5,4 +5,10 @@ const LogoImage = styled.img`
     height: auto;
 `;
 
-export { LogoImage };
+const BookImage = styled.img`
+    width: 240px;
+    aspect-ratio: 3/4;
+    object-fit: contain;
+`;
+
+export { LogoImage, BookImage };

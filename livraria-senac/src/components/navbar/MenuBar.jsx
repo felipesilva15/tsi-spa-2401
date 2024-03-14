@@ -11,8 +11,8 @@ function MenuBar() {
             <LogoImage src={logo} />
             <List>
                 {
-                    navItems.map((item) => {
-                        return <ListItem>{item}</ListItem>
+                    navItems.map((item, index) => {
+                        return <ListItem key={item}>{item}</ListItem>
                     })
                 }
             </List>

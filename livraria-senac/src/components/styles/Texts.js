@@ -16,4 +16,11 @@ const Text = styled.p`
     color: ${props => props.color || '#FFF'};
 `;
 
-export { Title, Subtitle, Text };
+const BookTitle = styled.div`
+    height: 2em;
+    font-weight: bold;
+`;
+
+
+
+export { Title, Subtitle, Text, BookTitle };
