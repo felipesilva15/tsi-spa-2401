@@ -12,7 +12,7 @@ exports.getBooks = () => {
  * @returns {Array}
  */
 exports.getBooksByTitle = (title) => {
-    return books.filter((book) => {
+    return books.find((book) => {
         return book.title.toLowerCase().includes(title.toLowerCase());
     });
 };
