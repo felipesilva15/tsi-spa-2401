@@ -12,7 +12,16 @@ const BooksContainer = styled.div`
     min-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 48px;
 `;
 
-export { Menu, BooksContainer };
+const Container = styled.div`
+    min-width: 400px;
+    display: flex;
+    flex-direction: ${props => props.direction || 'row'};
+    align-items: center;
+    justify-content: center;
+`;
+
+export { Menu, BooksContainer, Container };

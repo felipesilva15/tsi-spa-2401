@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const Card = styled.div`
     width: 320px;
-    border: 1px solid #b3b3b3;
     border-radius: 10px;
     padding: 12px;
     background-color: white;
     color: black;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5) !important;
 `;
 
 export { Card };

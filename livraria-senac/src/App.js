@@ -1,6 +1,7 @@
 import './App.css';
 import MostSearched from './components/mostSearched/MostSearched';
 import MenuBar from './components/navbar/MenuBar';
+import Search from './components/search/Search';
 import { BooksContainer } from './components/styles/Containers';
 
 function App() {
@@ -8,10 +9,9 @@ function App() {
     <div className="App">
       <MenuBar />
       <header className="App-header">
-        <BooksContainer>
-          <MostSearched></MostSearched>
-        </BooksContainer>
+        <Search></Search>
       </header>
+      <MostSearched></MostSearched>
     </div>
   );
 }
