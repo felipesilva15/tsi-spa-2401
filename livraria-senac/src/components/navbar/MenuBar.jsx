@@ -2,6 +2,7 @@ import { Menu } from "../styles/Containers";
 import { LogoImage } from "../styles/Images";
 import { List, ListItem } from "../styles/Lists";
 import logo from "../../images/logo.png"
+import { Link } from "react-router-dom";
 
 const navItems = ['Lançamentos', 'Blog', 'Fale conosco'];
 
@@ -15,8 +16,9 @@ function MenuBar() {
                         return <ListItem key={item}>{item}</ListItem>
                     })
                 }
-            </List>
-            <List>
+                <ListItem>
+                    <Link to="/register">Cadastro</Link>
+                </ListItem>
             </List>
         </Menu>
     );

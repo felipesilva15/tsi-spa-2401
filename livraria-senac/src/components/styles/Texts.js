@@ -23,9 +23,11 @@ const BookTitle = styled.div`
 `;
 
 const Input = styled.input`
-    width: 200px;
+    width: 100%;
+    min-width: 200px;
+    max-width: 600px;
     height: 50px;
-    border: 1px solid black;
+    border: 0.5px solid black;
     border-radius: 5px;
     background-color: #FFF;
     padding: 0 8px;

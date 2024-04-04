@@ -2,10 +2,12 @@ const express = require('express');
 const cors = require('cors');
 const { MongoClient, ObjectId } = require("mongodb");
 const bookService = require('./services/book-service')
+const userService = require('./services/user-service')
 
 const port = 8000;
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const uri = 'mongodb+srv://felipesilva15:Kz6C6KTC1XlpmXrz@main-cluster.mbq4el8.mongodb.net/'
 const client = new MongoClient(uri);
@@ -25,6 +27,10 @@ app.get('/books/:title', (req, res) => {
     }
 
     res.status(200).json(data);
+});
+
+app.post('/register', (req, res) => {
+    res.status(200).json(userService.saveUser(req.body));
 });
 
 app.get('/mongo/books', async (req, res) => {

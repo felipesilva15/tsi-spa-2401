@@ -22,6 +22,7 @@ const Container = styled.div`
     flex-direction: ${props => props.direction || 'row'};
     align-items: center;
     justify-content: center;
+    gap: ${props => props.gap || '0'};
 `;
 
 export { Menu, BooksContainer, Container };

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container } from "../styles/Containers";
 import { Input, Text, Title } from "../styles/Texts";
 import SearchResult from "./SearchResult";
+import { Button } from "../styles/Buttons";
 
 const baseUrl = 'http://localhost:8000'
 
@@ -16,7 +17,8 @@ const Search = () => {
             const res = await fetch(`${baseUrl}/books/${query}`);
 
             if (!res.ok) {
-                setBook(null)
+                setBook(null);
+                return;
             }
 
             const data = await res.json();
@@ -36,7 +38,7 @@ const Search = () => {
                 value={query}
                 onChange={ (e) => {setQuery(e.target.value)} }
             />
-            <button onClick={ (e) => {handleSubmit(e)} }>Pesquisar</button>
+            <Button margin="0 12px" type="button" onClick={ (e) => {handleSubmit(e)} }>Pesquisar</Button>
             <SearchResult book={book}></SearchResult>
         </Container>
     );

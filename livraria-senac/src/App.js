@@ -1,18 +1,28 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import MostSearched from './components/mostSearched/MostSearched';
 import MenuBar from './components/navbar/MenuBar';
 import Search from './components/search/Search';
-import { BooksContainer } from './components/styles/Containers';
+import Register from './components/register/Register';
 
 function App() {
   return (
+    
     <div className="App">
       <MenuBar />
-      <header className="App-header">
-        <Search></Search>
-      </header>
-      <MostSearched></MostSearched>
-    </div>
+      
+      <Routes>
+        <Route path='/' element={
+          <>
+            <header className="App-header">
+              <Search></Search>
+            </header>
+            <MostSearched></MostSearched>
+          </>
+        } />
+        <Route path='/register' element={ <Register/> }/>
+      </Routes>
+  </div>
   );
 }
 

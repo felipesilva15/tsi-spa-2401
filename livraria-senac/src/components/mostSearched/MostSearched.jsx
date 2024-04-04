@@ -12,9 +12,14 @@ function MostSearched() {
     useEffect(() => {
         const getBooks = async () => {
             try {
-                const res = await fetch(`${baseUrl}/books`);  
-                const data = await res.json();
+                const res = await fetch(`${baseUrl}/books`);
 
+                if (!res.ok) {
+                    setBooks([]);
+                    return;
+                }
+                
+                const data = await res.json();
                 console.log(data);
                 setBooks(data);
             } catch (err) {
