@@ -9,6 +9,8 @@ const Menu = styled.nav`
 `;
 
 const BooksContainer = styled.div`
+    padding: ${props => props.padding || '0'};
+    margin: ${props => props.margin || '0'};
     min-width: 1200px;
     display: flex;
     align-items: center;
@@ -17,7 +19,10 @@ const BooksContainer = styled.div`
 `;
 
 const Container = styled.div`
+    padding: ${props => props.padding || '0'};
+    margin: ${props => props.margin || '0'};
     min-width: 400px;
+    width: ${props => props.width || 'unset'};
     display: flex;
     flex-direction: ${props => props.direction || 'row'};
     align-items: center;

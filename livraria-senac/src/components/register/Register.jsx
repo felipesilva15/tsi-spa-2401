@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container } from "../styles/Containers";
 import { Input, Text, Title } from "../styles/Texts";
 import { Button } from "../styles/Buttons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const baseUrl = 'http://localhost:8000'
 
@@ -10,6 +10,8 @@ const Register = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,15 +38,14 @@ const Register = () => {
                 return;
             }
 
-            const data = await res.json();
-            console.log(data);
+            navigate('/');
         } catch (error) {
             console.log(error)
         }
     }
 
     return (
-        <Container direction="column" gap="24px">
+        <Container direction="column" gap="24px" width="unset">
             <h1>Tela de cadastro</h1>
             <Container gap="12px" direction="column" >
                 <Input type="text" placeholder="Nome"  value={name} onChange={ (e) => setName(e.target.value) }/>

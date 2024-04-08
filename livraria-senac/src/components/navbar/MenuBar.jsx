@@ -9,7 +9,9 @@ const navItems = ['Lançamentos', 'Blog', 'Fale conosco'];
 function MenuBar() {
     return (
         <Menu>
-            <LogoImage src={logo} />
+            <Link to='/'>
+                <LogoImage src={logo} />
+            </Link>
             <List>
                 {
                     navItems.map((item, index) => {

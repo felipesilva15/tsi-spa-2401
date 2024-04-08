@@ -30,16 +30,18 @@ const Search = () => {
     }
 
     return (
-        <Container direction="column">
+        <Container direction="column" width="100%" padding="36px">
             <Title>Encontre seu próximo livro</Title>
             <Text>Explore por título o livro desejado</Text>
-            <Input
-                placeholder="Digite o nome de um livro..."
-                value={query}
-                onChange={ (e) => {setQuery(e.target.value)} }
-            />
-            <Button margin="0 12px" type="button" onClick={ (e) => {handleSubmit(e)} }>Pesquisar</Button>
-            <SearchResult book={book}></SearchResult>
+            <Container direction="column" gap="18px" width="100%">
+                <Input
+                    placeholder="Digite o nome de um livro..."
+                    value={query}
+                    onChange={ (e) => {setQuery(e.target.value)} }
+                />
+                <Button margin="0 12px" type="button" onClick={ (e) => {handleSubmit(e)} }>Pesquisar</Button>
+                <SearchResult book={book}></SearchResult>
+            </Container>
         </Container>
     );
 };

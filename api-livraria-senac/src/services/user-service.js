@@ -21,3 +21,14 @@ exports.saveUser =  (data) => {
 
     return user;
 };
+
+/**
+ * Retorna o usuário filtrados pelo id
+ * @param {string} id
+ * @returns {Array}
+ */
+exports.getUserById = (id) => {
+    return users.find((user) => {
+        return user.id.includes(id);
+    });
+};

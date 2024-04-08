@@ -19,7 +19,20 @@ app.get('/books', (req, res) => {
 app.get('/books/:title', (req, res) => {
     const data = bookService.getBooksByTitle(req.params.title);
 
-    console.log(data);
+    if (!data) {
+        res.status(404).json({ message: 'Registro não encontrado' });
+        return;
+    }
+
+    res.status(200).json(data);
+});
+
+app.get('/users', (req, res) => {
+    res.status(200).json(userService.getUsers());
+});
+
+app.get('/users/:id', (req, res) => {
+    const data = userService.getUserById(req.params.id);
 
     if (!data) {
         res.status(404).json({ message: 'Registro não encontrado' });
@@ -77,7 +90,6 @@ app.get('/mongo/books/insert', async (req, res) => {
 
     const result = await collection.insertOne(doc);
 
-    console.log(result);
     res.status(200).json(result);
 })
 
@@ -90,8 +102,6 @@ app.delete('/mongo/books/:id', async (req, res) => {
     const collection = db.collection('books');
 
     const result = await collection.deleteOne({ _id: new ObjectId(req.params.id) });
-
-    console.log(result);
 
     if (result.deletedCount === 0) {
         res.status(200).json({ message: 'No document finded!' });

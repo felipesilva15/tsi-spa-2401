@@ -31,7 +31,7 @@ function MostSearched() {
     }, []);
 
     return (
-        <BooksContainer>
+        <BooksContainer padding="36px">
             {
                 books.map((book) => {
                     return (
