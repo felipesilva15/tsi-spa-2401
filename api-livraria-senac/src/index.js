@@ -43,6 +43,11 @@ app.get('/users/:id', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
+    if (!req.body.name || !req.body.email || !req.body.password) {
+        res.status(400).json({ "message": "Dados inválidos!" });
+        return;
+    }
+
     res.status(200).json(userService.saveUser(req.body));
 });
 
