@@ -4,7 +4,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 const bookService = require('./services/book-service')
 const userService = require('./services/user-service')
 
-const port = 8000;
+const port = 8080;
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -43,12 +43,32 @@ app.get('/users/:id', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    if (!req.body.name || !req.body.email || !req.body.password) {
+    const { name, email, password } = req.body;
+    
+    if (!name || !email || !password) {
         res.status(400).json({ "message": "Dados inválidos!" });
         return;
     }
 
     res.status(200).json(userService.saveUser(req.body));
+});
+
+app.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        res.status(400).json({ "message": "Dados inválidos!" });
+        return;
+    }
+
+    const isValidLogin = await userService.validateLogin(email, password)
+
+    if (!isValidLogin) {
+        res.status(400).json({ "message": "E-mail e/ou senha inválido!" });
+        return;
+    }
+
+    res.status(200).json({ "message": "Login efetuado com sucesso!" });
 });
 
 app.get('/mongo/books', async (req, res) => {

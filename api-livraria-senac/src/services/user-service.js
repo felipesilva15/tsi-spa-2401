@@ -32,3 +32,13 @@ exports.getUserById = (id) => {
         return user.id.includes(id);
     });
 };
+
+exports.validateLogin = (email, password) => {
+    const user = users.find(user => user.email == email);
+
+    if (!user || user.password != password) {
+        return false;
+    }
+
+    return true;
+};
