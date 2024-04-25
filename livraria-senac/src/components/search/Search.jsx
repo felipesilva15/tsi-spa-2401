@@ -4,7 +4,7 @@ import { Input, Text, Title } from "../styles/Texts";
 import SearchResult from "./SearchResult";
 import { Button } from "../styles/Buttons";
 
-const baseUrl = 'http://localhost:8000'
+const baseUrl = 'http://localhost:8080'
 
 const Search = () => {
     const [query, setQuery] = useState('');

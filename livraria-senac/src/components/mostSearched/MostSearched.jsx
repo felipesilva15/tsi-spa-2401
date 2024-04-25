@@ -4,7 +4,7 @@ import { BookImage } from "../styles/Images";
 import { BookTitle, Price, Text } from "../styles/Texts";
 import { BooksContainer } from "../styles/Containers";
 
-const baseUrl = 'http://localhost:8000'
+const baseUrl = 'http://localhost:8080'
 
 function MostSearched() {
     const [books, setBooks] = useState([]);
