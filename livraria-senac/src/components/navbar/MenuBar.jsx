@@ -21,6 +21,9 @@ function MenuBar() {
                 <ListItem>
                     <Link to="/register">Cadastro</Link>
                 </ListItem>
+                <ListItem>
+                    <Link to="/login">Login</Link>
+                </ListItem>
             </List>
         </Menu>
     );

@@ -4,6 +4,8 @@ import MostSearched from './components/mostSearched/MostSearched';
 import MenuBar from './components/navbar/MenuBar';
 import Search from './components/search/Search';
 import Register from './components/register/Register';
+import Home from './components/home/Home';
+import Login from './components/login/Login';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           </>
         } />
         <Route path='/register' element={ <Register/> }/>
+        <Route path='/login' element={ <Login/> }/>
+        <Route path='/home' element={ <Home/> }/>
       </Routes>
   </div>
   );
